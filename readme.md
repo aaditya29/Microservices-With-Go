@@ -6,7 +6,7 @@ manageable pieces, independent of others.
 
 #### Why Build Microservices?
 Their small scale and relative isolation can lead to many additional benefits, such as easier maintenance, <br>
-improved productivity, greater fault tolerance, better business alignment, and more.
+improved productivity, greater fault tolerance, better business alignment, and more. <br>
 Microservice architectures are the ‘new normal’. Building small, self-contained, ready to run applications can bring great flexibility and added resilience to your code.
 
 ### About This Repository
