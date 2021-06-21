@@ -11,6 +11,7 @@ func main() {
 		log.Println("Hello World")
 	})
 
+	//Creating function handler which prints goodbye world if the requested path is goodbye
 	http.HandleFunc("/goodbye", func(http.ResponseWriter, *http.Request) {
 		log.Println("Goodbye World")
 	})
