@@ -13,12 +13,14 @@ func main() {
 	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
 		log.Println("Hello World")
 
+		//Reading the message from the user or reading the body
 		d, err := ioutil.ReadAll(r.Body)
 		if err != nil {
 			http.Error(rw, "Oops! Error Occured", http.StatusBadRequest)
 			return
 		}
 
+		//Writing The Response
 		fmt.Fprintf(rw, "Hello %s", d)
 	})
 
@@ -27,5 +29,7 @@ func main() {
 		log.Println("Goodbye World")
 	})
 
+	//Starting to listen all connections
+	log.Println("Starting Server")
 	http.ListenAndServe("9090", nil) //Binding all the addresses at port 9090
 }
