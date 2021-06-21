@@ -1,14 +1,21 @@
+//Writing Basic Web Server In GO
 package main
 
 import (
+	"io/ioutil"
 	"log"
 	"net/http"
 )
 
 func main() {
 	//Creating fucntion handler which prints hello world on any path request
-	http.HandleFunc("/", func(http.ResponseWriter, *http.Request) {
+	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
 		log.Println("Hello World")
+		d, err := ioutil.ReadAll(r.Body)
+		if err != nil {
+			http.Error(rw, "Oops! Error Occured", http.StatusBadRequest)
+			return
+		}
 	})
 
 	//Creating function handler which prints goodbye world if the requested path is goodbye
