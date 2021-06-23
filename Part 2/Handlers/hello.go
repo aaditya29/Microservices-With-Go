@@ -12,6 +12,13 @@ import (
 
 //Hello is a simple handler
 type Hello struct {
+	l *log.Logger
+}
+
+// NewHello creates a new hello handler with the given logger
+// It is going to take log.logger and going to return Hello handler
+func NewHello(l *log.Logger) *Hello {
+
 }
 
 //Method which satisfies HTTP handler interface
