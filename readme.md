@@ -17,5 +17,6 @@ freecodecamp, youtube and medium.<br>
 #### Technologies Used
 1. Golang
 2. Restful APIs
+3. Gorilla Framework
 
 <b>Please note this project is used for the personal learning/practice only.</b>
