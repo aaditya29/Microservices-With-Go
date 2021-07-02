@@ -18,7 +18,7 @@ type Hello struct {
 // NewHello creates a new hello handler with the given logger
 // It is going to take log.logger and going to return Hello handler
 func NewHello(l *log.Logger) *Hello {
-
+	return &Hello{l}
 }
 
 //Method which satisfies HTTP handler interface
