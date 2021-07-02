@@ -35,7 +35,7 @@ func main() {
 	go func() {
 		l.Println("Starting server on port 9090")
 
-		err := s.ListenAndServe()
+		err := s.ListenAndServe()//Handling listenandserve in gofunc so that it not gonna block
 		if err != nil {
 			l.Printf("Error starting server: %s\n", err)
 			os.Exit(1)
@@ -45,10 +45,10 @@ func main() {
 	// trap sigterm or interupt and gracefully shutdown the server
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
-	signal.Notify(c, os.Kill)
+	signal.Notify(c, os.Kill)// Going to broadcast a message whenever os kills a command or interrupts which is written on previous line cod
 
 	// Block until a signal is received.
-	sig := <-c
+	sig := <-c//message availlable is consumed
 	log.Println("Got signal:", sig)
 
 	// gracefully shutdown the server, waiting max 30 seconds for current operations to complete
