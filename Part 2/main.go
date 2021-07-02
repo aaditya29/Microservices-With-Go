@@ -9,11 +9,13 @@ import (
 func main() {
 	l := log.New(os.Stdout, "products-api ", log.LstdFlags) //Creating new logger
 	//Creating a reference to the handler
-	hh := handlers.NewHello(l)
+	hh := handlers.NewHello(l)   //HelloHandler
+	gh := handlers.NewGoodbye(l) //GoodbyeHandler
 
 	// creating a new serve mux and registering the handlers
 	sm := http.NewServeMux()
 	sm.Handle("/", hh)
+	sm.Handle("/goodbye", gh)
 
 	http.ListenAndServe(":9090", nil)
 }
