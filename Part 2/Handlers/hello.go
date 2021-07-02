@@ -23,7 +23,7 @@ func NewHello(l *log.Logger) *Hello {
 
 //Method which satisfies HTTP handler interface
 func (h *Hello) ServeHTTP(rw http.ResponseWriter, r *http.Request) { //Signature that we need to satisfy the HTTP Interface
-	log.Println("Hello World")
+	h.l.Println("Hello World")
 
 	//Reading the message from the user or reading the body
 	d, err := ioutil.ReadAll(r.Body)
