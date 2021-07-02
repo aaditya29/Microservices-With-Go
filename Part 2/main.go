@@ -53,6 +53,6 @@ func main() {
 
 	// When message is consumed gracefully shutdown the server, waiting max 30 seconds for current operations to complete
 	ctx, _ := context.WithTimeout(context.Background(), 30*time.Second)
-	s.Shutdown(ctx)
+	s.Shutdown(ctx)//gracefull shutdown takes context as parameter
 
 }
