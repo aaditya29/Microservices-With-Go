@@ -27,7 +27,4 @@ func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(rw, "Unable to marshal json or fetch data", http.StatusInternalServerError)
 	}
-
-	rw.Write(d)
-
 }
