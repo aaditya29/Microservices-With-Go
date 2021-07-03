@@ -18,8 +18,21 @@ func NewProducts(l *log.Logger) *Products {
 }
 
 // ServeHTTP is the main entry point for the handler and staisfies the http.Handler
-// Making ServeHTTP function and writing JSON
+// Making ServeHTTP function
 func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
+	// handle the request for a list of products
+	if r.Method == http.MethodGet {
+		p.getProducts(rw, r)
+		return
+	}
+
+	// catch all
+	// if no method is satisfied return an error
+	rw.WriteHeader(http.StatusMethodNotAllowed)
+}
+
+// getProducts returns the products from the data store
+func (p *Products) getProducts(rw http.ResponseWriter, r *http.Request) {
 	//we want to take getrequest and return product list from folder data
 	// we need encoding json for this stuff
 	lp := data.GetProducts()
