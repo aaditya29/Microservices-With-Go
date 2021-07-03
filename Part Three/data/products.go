@@ -15,6 +15,11 @@ type Product struct { //name of API is product
 	DeletedOn   string  `json:"-"`
 }
 
+// GetProducts returns a list of products
+func GetProducts() Products {
+	return productList
+}
+
 // example product list
 var productList = []*Product{
 	&Product{
