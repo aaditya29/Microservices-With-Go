@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"encoding/json"
 	"log"
 	"net/http"
 
@@ -24,7 +23,7 @@ func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	//we want to take getrequest and return product list from folder data
 	// we need encoding json for this stuff
 	lp := data.GetProducts()
-	d, err := json.Marshal(lp)
+	err := lp.ToJSON(rw) //returning responsewriter
 	if err != nil {
 		http.Error(rw, "Unable to marshal json or fetch data", http.StatusInternalServerError)
 	}
