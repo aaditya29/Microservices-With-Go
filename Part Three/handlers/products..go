@@ -1,8 +1,11 @@
 package handlers
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/aaditya29/Microservices-With-Go/tree/master/Part-Three/data"
 )
 
 // Products is a http.Handler
@@ -20,5 +23,12 @@ func NewProducts(l *log.Logger) *Products {
 func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	//we want to take getrequest and return product list from folder data
 	// we need encoding json for this stuff
+	lp := data.GetProducts()
+	d, err := json.Marshal(lp)
+	if err != nil {
+		http.Error(rw, "Unable to marshal json or fetch data", http.StatusInternalServerError)
+	}
+
+	rw.Write(d)
 
 }
