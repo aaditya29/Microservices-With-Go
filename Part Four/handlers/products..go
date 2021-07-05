@@ -44,6 +44,7 @@ func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 		Generally used for updating the resources
 	*/
 	//Updating the data
+	//Extracting the parameters from the URL
 	if r.Method == http.MethodPut {
 		p.l.Println("PUT", r.URL.Path)
 		// expect the id in the URI
