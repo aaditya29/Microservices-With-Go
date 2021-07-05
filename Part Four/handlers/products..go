@@ -63,6 +63,6 @@ func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
 		http.Error(rw, "Unable to unmarshal json or fetch data", http.StatusBadRequest)
 	}
 
-	data.AddProduct(prod)
+	data.AddProduct(prod) //Adding product that we recieved
 
 }
