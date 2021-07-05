@@ -54,4 +54,7 @@ func (p *Products) getProducts(rw http.ResponseWriter, r *http.Request) {
 //addProduct adds product on ever POST request
 func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
 	p.l.Println("Handle POST Product") //Logging using logger
+
+	//Taking data from POST and converting it into PRODUCT Object
+
 }
