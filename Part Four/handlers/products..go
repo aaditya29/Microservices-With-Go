@@ -56,5 +56,13 @@ func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
 	p.l.Println("Handle POST Product") //Logging using logger
 
 	//Taking data from POST and converting it into PRODUCT Object
+	prod := &data.Product{} //creating new PRODUCT object
+
+	err := prod.FromJSON(r.Body)
+	if err != nil {
+		http.Error(rw, "Unable to unmarshal json or fetch data", http.StatusBadRequest)
+	}
+
+	data.AddProduct(prod)
 
 }
