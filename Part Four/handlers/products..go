@@ -128,5 +128,4 @@ func (p Products) updateProducts(id int, rw http.ResponseWriter, r *http.Request
 		http.Error(rw, "Product not found", http.StatusInternalServerError)
 		return
 	}
-	data.updateProduct(id, prod)
 }
