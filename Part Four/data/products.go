@@ -19,6 +19,16 @@ type Product struct { //name of API is product
 	DeletedOn   string  `json:"-"`
 }
 
+//
+func (p *Product) FromJSON(r io.Reader) error {
+	e := json.NewDecoder(r)
+	return e.Decode(p)
+	/*
+		What's happening here is when we gonna create product struct in products..go and gonna call FROMJSON
+		with a reader it's going to settle all the property of the HTTP Request is.
+	*/
+}
+
 // Products is a collection of Product
 type Products []*Product
 
