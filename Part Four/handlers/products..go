@@ -26,6 +26,15 @@ func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	/*
+		Post creates a new resource at specified URL.
+		To add a new product we are going to implement POST operation
+	*/
+	if r.Method == http.MethodPost {
+		p.addProduct(rw, r) //Passing responsewriter and request recieved
+		return
+	}
+
 	// catch all
 	// if no method is satisfied return an error
 	rw.WriteHeader(http.StatusMethodNotAllowed)
@@ -40,4 +49,9 @@ func (p *Products) getProducts(rw http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(rw, "Unable to marshal json or fetch data", http.StatusInternalServerError)
 	}
+}
+
+//addProduct adds product on ever POST request
+func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
+	p.l.Println("Handle POST Product") //Logging using logger
 }
