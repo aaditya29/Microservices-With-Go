@@ -30,9 +30,20 @@ func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 		Post creates a new resource at specified URL.
 		To add a new product we are going to implement POST operation
 	*/
+	//Adding new PRODUCTS
 	if r.Method == http.MethodPost {
 		p.addProduct(rw, r) //Passing responsewriter and request recieved
 		return
+	}
+
+	/*
+		PUT either creates or replaces the resource at specified URL.
+		The body of the request message specifies the resource to be created or updated.
+		Generally used for updating the resources
+	*/
+	//Updating the data
+	if r.Method == http.MethodPut {
+
 	}
 
 	// catch all
