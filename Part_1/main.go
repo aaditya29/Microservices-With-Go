@@ -20,7 +20,7 @@ func main() {
 			return
 		}
 
-		//Writing The Response
+		//Writing Response
 		fmt.Fprintf(rw, "Hello %s", d)
 	})
 
