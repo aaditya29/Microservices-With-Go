@@ -48,7 +48,8 @@ func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
 
 //Function to updateProduct
 func (p Products) UpdateProducts(rw http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
+	vars := mux.Vars(r) //Passing a request
+
 	id, err := strconv.Atoi(vars["id"])
 	if err != nil {
 		http.Error(rw, "Unable to convert id", http.StatusBadRequest)
@@ -69,3 +70,5 @@ func (p Products) UpdateProducts(rw http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
+
+type KeyProduct struct{}
