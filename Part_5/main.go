@@ -15,6 +15,7 @@ import (
 	"time"
 
 	"github.com/aaditya29/Microservices-With-Go/tree/master/Part-Three/handlers"
+	"github.com/gorilla/mux"
 	"github.com/nicholasjackson/env"
 )
 
@@ -30,7 +31,7 @@ func main() {
 	ph := handlers.NewProducts(l)
 
 	// create a new serve mux and register the handlers
-	sm := http.NewServeMux()
+	sm := mux.NewRouter()()
 	sm.Handle("/", ph)
 
 	// create a new server
