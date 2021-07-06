@@ -1,9 +1,3 @@
-//In this part we refactor our Standard library RESTful service and start to implement the Gorill toolkit for routing.
-
-// Building Restful services with GOlang
-// REST stands for Representational State Transfer Services
-// It is an architectural approach to design web services.
-
 package main
 
 import (
@@ -31,8 +25,20 @@ func main() {
 	ph := handlers.NewProducts(l)
 
 	// create a new serve mux and register the handlers
-	sm := mux.NewRouter()()
-	sm.Handle("/", ph)
+	sm := mux.NewRouter()
+
+	getRouter := sm.Methods(http.MethodGet).Subrouter()
+	getRouter.HandleFunc("/", ph.GetProducts)
+
+	putRouter := sm.Methods(http.MethodPut).Subrouter()
+	putRouter.HandleFunc("/{id:[0-9]+}", ph.UpdateProducts)
+	putRouter.Use(ph.MiddlewareValidateProduct)
+
+	postRouter := sm.Methods(http.MethodPost).Subrouter()
+	postRouter.HandleFunc("/", ph.AddProduct)
+	postRouter.Use(ph.MiddlewareValidateProduct)
+
+	//sm.Handle("/products", ph)
 
 	// create a new server
 	s := http.Server{
