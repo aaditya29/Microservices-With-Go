@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 	"time"
-	"github.com/aaditya29/Microservices-With-Go/Part 2/Handlers/"//Handler Import Path
+	"github.com/aaditya29/Microservices-With-Go/Part 2/Handlers/"//Writing Handler Import Path
 )
 
 func main() {
