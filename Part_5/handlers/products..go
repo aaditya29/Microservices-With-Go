@@ -71,7 +71,13 @@ func (p Products) UpdateProducts(rw http.ResponseWriter, r *http.Request) {
 
 type KeyProduct struct{}
 
-func (p Products) MiddlewareValidateProduct(next http.Handler) http.Handler {
+func (p Products) MiddlewareValidateProduct(next http.Handler) http.Handler { /*
+		Mux supports the addition of middlewares to a Router, which are executed in the order they are added if a match is found,
+		including its subrouters.
+		 Middlewares are (typically) small pieces of code which take one request, do something with it,
+		 and pass it down to another middleware or the final handler.
+		  Some common use cases for middleware are request logging, header manipulation, or ResponseWriter hijacking.
+	*/
 	return http.HandlerFunc(func(rw http.ResponseWriter, r *http.Request) {
 		prod := data.Product{}
 

@@ -36,6 +36,7 @@ func main() {
 	putRouter.HandleFunc("/{id:[0-9]+}", ph.UpdateProducts) //Defining a variable for gorill mux and calling it id with help of regex
 	putRouter.Use(ph.MiddlewareValidateProduct)
 
+	//Creating Router for POSTRequest
 	postRouter := sm.Methods(http.MethodPost).Subrouter()
 	postRouter.HandleFunc("/", ph.AddProduct)
 	postRouter.Use(ph.MiddlewareValidateProduct)
