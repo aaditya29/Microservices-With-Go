@@ -31,8 +31,9 @@ func main() {
 	//it means we can create a route which is only applicable to GET and we can register our handlers on that*/
 	getRouter.HandleFunc("/", ph.GetProducts) //Adding handler
 
+	//Creating Router for PUTRequest
 	putRouter := sm.Methods(http.MethodPut).Subrouter()
-	putRouter.HandleFunc("/{id:[0-9]+}", ph.UpdateProducts)
+	putRouter.HandleFunc("/{id:[0-9]+}", ph.UpdateProducts) //Defining a variable for gorill mux and calling it id with help of regex
 	putRouter.Use(ph.MiddlewareValidateProduct)
 
 	postRouter := sm.Methods(http.MethodPost).Subrouter()

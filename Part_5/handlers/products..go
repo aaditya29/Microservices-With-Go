@@ -3,8 +3,10 @@ package handlers
 import (
 	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/aaditya29/Microservices-With-Go/tree/master/Part-Three/data"
+	"github.com/gorilla/mux"
 )
 
 // Products is a http.Handler
@@ -45,17 +47,18 @@ func (p *Products) addProduct(rw http.ResponseWriter, r *http.Request) {
 }
 
 //Function to updateProduct
-func (p Products) updateProducts(id int, rw http.ResponseWriter, r *http.Request) {
-	p.l.Println("Handle PUT Product")
-
-	prod := &data.Product{}
-
-	err := prod.FromJSON(r.Body)
+func (p Products) UpdateProducts(rw http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id, err := strconv.Atoi(vars["id"])
 	if err != nil {
-		http.Error(rw, "Unable to unmarshal json or fetch data", http.StatusBadRequest)
+		http.Error(rw, "Unable to convert id", http.StatusBadRequest)
+		return
 	}
 
-	err = data.UpdateProduct(id, prod)
+	p.l.Println("Handle PUT Product", id)
+	prod := r.Context().Value(KeyProduct{}).(data.Product)
+
+	err = data.UpdateProduct(id, &prod)
 	if err == data.ErrProductNotFound {
 		http.Error(rw, "Product not found", http.StatusNotFound)
 		return
