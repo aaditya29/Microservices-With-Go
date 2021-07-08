@@ -38,5 +38,4 @@ Then import the validator package into your own code.
 
 	import "github.com/go-playground/validator"
 
-Error Return Value
 -------
