@@ -43,7 +43,13 @@ For Google App Engine, create a directory tree inside your app and clone the rep
 
 ```sh
 $ cd myapp
+```
+```sh
 $ mkdir -p github.com/gorilla
+```
+```sh
 $ cd github.com/gorilla
+```
+```sh
 $ git clone git://github.com/gorilla/mux.git
 ```
