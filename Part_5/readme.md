@@ -1,9 +1,9 @@
 ## Building Microservices With Golang
 
 #### Part Five
-In this part we are going to continue building a simple RESTfulservice using the standard packages in Golang.<br>
+In this part we are going to continue building a simple RESTfulservice using the standard packages in <b>Golang.</b><br>
 
-<b>Also we are going to learn how to use the Gorilla framework</b>
+<b> Also we are going to learn and implement Gorilla Framework</b>
 
 ## Gorilla Framework
 [![GoDoc](https://godoc.org/github.com/gorilla/mux?status.svg)](https://godoc.org/github.com/gorilla/mux)
