@@ -1,7 +1,7 @@
 ## Building Microservices With Golang
 
 #### Part Six
-In this part we are going to look at the Go Validator package and how it can be used to validate <b>JSON.</b>br>
+In this part we are going to look at the Go Validator package and how it can be used to validate <b>JSON.</b><br>
 
 ## Package Validator
 
