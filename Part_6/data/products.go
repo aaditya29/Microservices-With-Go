@@ -16,8 +16,8 @@ type Product struct {
 	ID          int     `json:"id"`
 	Name        string  `json:"name" validate:"required"` //Validating nae
 	Description string  `json:"description"`
-	Price       float32 `json:"price" validate:"gt=0"` //Validating price
-	SKU         string  `json:"sku" validate:"required,sku"`
+	Price       float32 `json:"price" validate:"gt=0"`       //Validating price
+	SKU         string  `json:"sku" validate:"required,sku"` //Validating SKU i.e. Stock Keeping Unit
 	CreatedOn   string  `json:"-"`
 	UpdatedOn   string  `json:"-"`
 	DeletedOn   string  `json:"-"`
