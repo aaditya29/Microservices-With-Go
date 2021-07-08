@@ -18,5 +18,6 @@ freecodecamp, youtube and medium.<br>
 1. Golang
 2. Restful APIs
 3. Gorilla Framework
+4. Swagger
 
 <b>Please note this project is used for the personal learning/practice only.</b>
