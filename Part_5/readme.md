@@ -25,27 +25,25 @@ The name mux stands for "HTTP request multiplexer". Like the standard `http.Serv
 * Registered URLs can be built, or "reversed", which helps maintaining references to resources.
 * Routes can be used as subrouters: nested routes are only tested if the parent route matches. This is useful to define groups of routes that share common conditions like a host, a path prefix or other repeated attributes. As a bonus, this optimizes request matching.
 
----
-
-* [Install](#install)
-* [Examples](#examples)
-* [Matching Routes](#matching-routes)
-* [Static Files](#static-files)
-* [Serving Single Page Applications](#serving-single-page-applications) (e.g. React, Vue, Ember.js, etc.)
-* [Registered URLs](#registered-urls)
-* [Walking Routes](#walking-routes)
-* [Graceful Shutdown](#graceful-shutdown)
-* [Middleware](#middleware)
-* [Handling CORS Requests](#handling-cors-requests)
-* [Testing Handlers](#testing-handlers)
-* [Full Example](#full-example)
-
----
-
-## Install
+## Installing Gorilla
 
 With a [correctly configured](https://golang.org/doc/install#testing) Go toolchain:
 
 ```sh
 go get -u github.com/gorilla/mux
+```
+
+In case your git isn't working due to proxy issues, one can try this hacky workaround (which is not normally recommended)<br>
+Or clone a repository and use the source code directly:
+```sh
+$ git clone git://github.com/gorilla/mux.git
+``` 
+
+For Google App Engine, create a directory tree inside your app and clone the repository there:
+
+```sh
+$ cd myapp
+$ mkdir -p github.com/gorilla
+$ cd github.com/gorilla
+$ git clone git://github.com/gorilla/mux.git
 ```
