@@ -96,7 +96,7 @@ func (p Products) MiddlewareValidateProduct(next http.Handler) http.Handler { /*
 			http.Error(
 				rw,
 				fmt.Sprintf("Error validating product: %s", err),
-				http.StatusBadRequest,
+				http.StatusBadRequest, //If a validation fails on a product it's going to be a Bad Request
 			)
 			return
 		}
