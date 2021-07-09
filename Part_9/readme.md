@@ -19,6 +19,7 @@ But if you need to upload files then <b>application/x-www-form-urlencoded</b> is
 For example, let’s say following two data are needed to send:
 1. name
 2. age <br>
+
 Then <b>application/x-www-form-urlencoded</b> can be used to send the above data.
 But let’s say that you also need to send the profile photo of the user in the request as well. So the data is now as below:
 1. name
