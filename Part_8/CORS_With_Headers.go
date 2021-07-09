@@ -26,7 +26,7 @@ func setupCorsResponse(w *http.ResponseWriter, req *http.Request) {
 // Register routing for creating customer
 route.Handle("/"+APIVersion+"/customers", createUser())
    Methods(http.MethodPost, http.MethodOptions)
-   Name("Create customer")
+   Name("Create customer.")
 
 // Calling function to add all CORS Headers
 func createUser(w http.ResponseWriter, req *http.Request) {
