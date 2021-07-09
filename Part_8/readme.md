@@ -22,3 +22,13 @@ understand that other domain is giving full permission to show his content on di
 Browser blocks content by CORS Policy and it can be solved by server side by setting special headers.
 
 <b> In Golang, we need to add CORS headers in OPTIONS method of HTTP request.</b>
+
+### Installing CORS:
+
+Install `cors`:
+
+    go get github.com/rs/cors
+
+Then run your server:
+
+    go run server.go
