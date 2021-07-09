@@ -28,7 +28,3 @@ Browser blocks content by CORS Policy and it can be solved by server side by set
 Install `cors`:
 
     go get github.com/rs/cors
-
-Then run your server:
-
-    go run server.go
