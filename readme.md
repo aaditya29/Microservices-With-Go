@@ -14,7 +14,7 @@ can bring great flexibility and added resilience to your code.
 
 ### About This Repository
 Practice repository for building microservices through golang with the help of various resources like<br>
-freecodecamp, youtube lessons of Nicholas Jackson and Medium.<br>
+freecodecamp, Youtube lessons of Nicholas Jackson and Medium.<br>
 
 #### Technologies Used
 1. Golang
