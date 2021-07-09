@@ -14,7 +14,7 @@ When the domains have:
 3. Different port (Like https://example.com:8080 and https://example.com:8081)
 4. Different protocol (Like https://example.com and http://example.com)
 
-    To see content of different domain, we should keep following points in mind:
+To see content of different domain, we should keep following points in mind:
 1. Either we need to disable security issue from browser so that it doesn’t check for CORS security.
 2. Or from server side we need to add some special headers values in HTTP requests and responses so that browser can <br>
 understand that other domain is giving full permission to show his content on different domain.
