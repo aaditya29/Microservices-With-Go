@@ -1,7 +1,7 @@
 ## Building Microservices With Golang
 
 #### Part Seven
-In this part we are going to look at how we can document the API or the microservice we are building <br>
+In this part we are going to look at how we can document the API or the microservice we are building with the help of <b>Swagger</b> <br>
 Also we are going to learn how we can embed ReDoc to build a nice documentation API direct into our service.<br>
 
 ## Swagger
