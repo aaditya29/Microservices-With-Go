@@ -28,4 +28,8 @@ But let’s say that you also need to send the profile photo of the user in the 
 In the above case, it will not be efficient to use <b>application/x-www-form-urlencoded</b> content-type.<b>multipart/form-data </b> should be used in this case. <br>
 So for sending simple form data use <b>application/x-www-form-urlencoded </b> but if the form-data also needs to send binary data then use <b>multipart/form-data.</b>
 
+We are going to learn about HTTP Multipart through following three examples:
+1. HTTP Server for parsing multipart/form-data request.
+2. HTTP Client for sending multipart/form-data request.
+3. Golang Multipart File Upload
 
