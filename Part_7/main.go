@@ -1,5 +1,3 @@
-//JSON Validation using GO Validator
-
 package main
 
 import (
