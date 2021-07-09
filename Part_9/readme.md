@@ -18,12 +18,12 @@ But if you need to upload files then <b>application/x-www-form-urlencoded</b> is
 
 For example, let’s say following two data are needed to send:
 1. name
-2. age
+2. age <br>
 Then <b>application/x-www-form-urlencoded</b> can be used to send the above data.
 But let’s say that you also need to send the profile photo of the user in the request as well. So the data is now as below:
 1. name
 2. age
-3. photo
+3. photo <br>
 In the above case, it will not be efficient to use <b>application/x-www-form-urlencoded</b> content-type.<br>
 <b>multipart/form-data</b> should be used in this case. So for sending simple form data use <b>application/x-www-form-urlencoded </b> <br>
 but if the form-data also needs to send binary data then use <b>multipart/form-data.</b>
