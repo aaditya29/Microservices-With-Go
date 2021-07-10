@@ -23,6 +23,7 @@ Both the parts have their value part as an array because for the same key there 
 
 2. Form: It holds combine data of query string and non-file fields of the multipart/form-data request body. <br>
 For example, for the above case, it will only hold the name and age field. It has below format:<br>
+
 	map[string][]string
 
 
