@@ -42,3 +42,9 @@ name and age key and not for photo key.
 	request.Form["name"]
     request.PostForm["name"] 
     request.MultipartForm.Value["name"]
+
+is going to return
+
+	["John"]
+
+It is going to return array because for the same key there can be different values.
