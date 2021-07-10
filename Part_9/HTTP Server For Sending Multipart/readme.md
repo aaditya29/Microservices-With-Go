@@ -30,6 +30,13 @@ c) PostForm: It only holds the non-file fields of the multipart/form-data reques
 
 	map[string][]string
 
+Other than the above fields, the request object also provides the below utility function: <br>
+d) FormFile– This function can be used to get the first file for the given key. So this function will only return data <br>
+for photo key and not for name and age key.
+
+e) PostFormValue – This function returns the first value for the given form key.  This function will only return data for<br>
+name and age key and not for photo key.
+
 
 
 
