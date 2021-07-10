@@ -30,3 +30,7 @@ with a text payload. The response returned by this endpoint could be as follows.
 
 In a REST framework, <b>/sayHi</b> would be a route that handles the processing of the Hi greeting message. <br>
 
+More about RPC can be read [here](https://golang.org/pkg/net/rpc/)
+
+Now we will learn creating RPC [server](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_10/Creating%20An%20RPC%20Server) and RPC [client](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_10/Creating%20An%20RPC%20Client).
+
