@@ -16,5 +16,5 @@ But there are following conditions that this <b>type</b> should satisfy:
 4. The second argument of this method should be a pointer. This argument will be used to return a result by overriding its value.
 5. This method should return an error value. This is useful to return an error in case if the procedure call fails with an error.
 
-Now we will create a common package that exports types that can be shared between RPC clients and servers in this [code.](https://github.com/aaditya29/Microservices-With-Go/blob/master/Part_10/Creating%20An%20RPC%20Server/creatingserver.go) <br>
+Now we will create a common package that exports types that can be shared between RPC clients and servers in this [code](https://github.com/aaditya29/Microservices-With-Go/blob/master/Part_10/Creating%20An%20RPC%20Server/creatingserver.go).<br>
 And then in second [part](https://github.com/aaditya29/Microservices-With-Go/blob/master/Part_10/Creating%20An%20RPC%20Server/implementingserver.go) we will implement the server. <br>
