@@ -48,3 +48,13 @@ is going to return
 	["John"]
 
 It is going to return array because for the same key there can be different values.
+
+Whereas
+
+	request.PostFormValue("name") 
+
+will return
+
+	John
+
+As we can see it is not an array because as mentioned above this function returns the first value associated with the key. <br>
