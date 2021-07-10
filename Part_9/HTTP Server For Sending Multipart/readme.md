@@ -26,5 +26,13 @@ For example, for the above case, it will only hold the name and age field. It ha
 
 	map[string][]string
 
+c) PostForm: It only holds the non-file fields of the multipart/form-data request body. So for the above case, it will only<br> hold the name and age field. It also has the same format as <b>Form.</b>
+
+	map[string][]string
+
+
+
+
+
 
 
