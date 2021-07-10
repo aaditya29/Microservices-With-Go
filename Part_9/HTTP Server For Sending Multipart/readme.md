@@ -37,9 +37,8 @@ for photo key and not for name and age key.
 e) PostFormValue – This function returns the first value for the given form key.  This function will only return data for<br>
 name and age key and not for photo key.
 
+#### Accessing Name, Key and Photo Values in Different Way:
 
-
-
-
-
-
+	request.Form["name"]
+    request.PostForm["name"] 
+    request.MultipartForm.Value["name"]
