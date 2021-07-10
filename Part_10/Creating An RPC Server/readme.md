@@ -6,3 +6,7 @@ Go provides <b>net/rpc</b> package to implement RPC client-server architecture. 
 
 First we need some procedures so that we register them with the server and clients can execute them remotely. <br>
 In Go, we do not register functions or methods directly. We register a type that implements methods. <br>
+
+To say in a more clear way, we register an instance (object) of that <b>type</b>. All public methods of that type are registered<br>
+as procedures automatically. <br>
+But there are certain condition that this <b>type</b> should satisfy.
