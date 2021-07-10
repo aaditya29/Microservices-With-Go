@@ -13,5 +13,8 @@ The rpc.DialHTTP function establishes a connection with the RPC server hosted us
 
 	func DialHTTP(network, address string) (*Client, error)
 
+Here, the network argument specifies the transport protocol. Since we need to connect with an RPC server using HTTP Tunneling which operates on TCP, this argument value will be tcp. <br>
+The address argument is the physical address of the server on the network along with the server port number. <br>
 
+The implementation of creating the client can be found [here](https://github.com/aaditya29/Microservices-With-Go/blob/master/Part_10/Creating%20An%20RPC%20Client/creatingclient.go).
 
