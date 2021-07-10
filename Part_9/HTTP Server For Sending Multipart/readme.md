@@ -59,6 +59,6 @@ will return
 
 As we can see it is not an array because as mentioned above this function returns the first value associated with the key. <br>
 
-In similar way we can access the age an key value too.
+In similar way we can access the age and key value too.
 
 <b> For stepwise coding example of HTML server multipart form data body request example click</b> [here](https://github.com/aaditya29/Microservices-With-Go/blob/master/Part_9/HTTP%20Server%20For%20Sending%20Multipart/server.go)
