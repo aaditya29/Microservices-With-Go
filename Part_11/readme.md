@@ -17,4 +17,20 @@ The information contained in the header describes the algorithm used to generate
 
 [HS256](https://www.loginradius.com/blog/async/jwt-signing-algorithms/) is the hashing algorithm HMAC SHA-256 used to generate the signature in the above code.<br>
 
+#### Payload
+All the claims within <b>JWT</b> authentication are stored in this part. Claims are used to provide authentication to the party receiving the token.  <br>
+
+For example, a server can set a claim saying ‘isAdmin: true’ and issue it to an administrative user upon successfully logging into the application. The admin user can now send this token in every consequent request he/she sends to the server to prove their identity.<br>
+
+The decoded version of the payload from the JWT example written above looks like:
+
+
+	{ “sub”: “1234567890”,
+    “name”: “John Doe”,
+    “iat”: 1516239022
+    }
+
+The ‘name’ field written abover is used to identify the user to whom the token was issued to. The ‘sub’ and ‘iat’ are examples of registered claims and are stand for ‘subject’ and ‘issued at’. <br>
+
+
 
