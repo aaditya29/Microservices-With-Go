@@ -46,3 +46,11 @@ The signature part of a JWT is derived from the header and payload fields. The s
 
 	hash_value = hash([base64UrlEncode(header) + “.” + base64UrlEncode(payload)], secret-key)
     
+3. Base64Url encode the hash value obtained from the step above. <br>
+
+
+	Signature = base64UrlEncode(hash_value)
+
+Because the ‘secret-key’ is only known to the server, only it can issue new tokens with a valid signature. Users can not forge tokens as producing a valid Signature for the token requires the knowledge of the ‘secret-key’. <br>
+
+Now the implementation of JWT authentication in Golang is explained [here](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_11/JWT%20Authentication) with code.
