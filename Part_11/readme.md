@@ -35,9 +35,10 @@ The ‘name’ field written abover is used to identify the user to whom the tok
 #### Signature
 The signature part of a JWT is derived from the header and payload fields. The steps involved in creating this signature are as follows:
 
-1.  Combine the base64url encoded representations of header and payload with a dot (.)
+1. Combine the base64url encoded representations of header and payload with a dot (.)
 
 
 	base64UrlEncode(header) + “.” + base64UrlEncode(payload)
+
 
 
