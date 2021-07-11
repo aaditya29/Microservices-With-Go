@@ -37,6 +37,7 @@ The signature part of a JWT is derived from the header and payload fields. The s
 
 1.  Combine the base64url encoded representations of header and payload with a dot (.)
 
+
 	base64UrlEncode(header) + “.” + base64UrlEncode(payload)
 
 
