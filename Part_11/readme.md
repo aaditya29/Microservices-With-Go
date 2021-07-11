@@ -5,7 +5,7 @@
 JWTs can be broken down into three parts:
 1. Header
 2. Payload
-3. ignature.
+3. Signature.
 
 #### Header
 The information contained in the header describes the algorithm used to generate the signature. The decoded version of the header from the above example looks like:<br>
@@ -31,6 +31,12 @@ The decoded version of the payload from the JWT example written above looks like
     }
 
 The ‘name’ field written abover is used to identify the user to whom the token was issued to. The ‘sub’ and ‘iat’ are examples of registered claims and are stand for ‘subject’ and ‘issued at’. <br>
+
+#### Signature
+The signature part of a JWT is derived from the header and payload fields. The steps involved in creating this signature are as follows:
+
+1.  Combine the base64url encoded representations of header and payload with a dot (.)
+	base64UrlEncode(header) + “.” + base64UrlEncode(payload)
 
 
 
