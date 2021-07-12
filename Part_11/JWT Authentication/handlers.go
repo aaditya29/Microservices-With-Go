@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -78,9 +79,65 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 
 	// Finally, we set the client cookie for "token" as the JWT we just generated
 	// we also set an expiry time which is the same as the token itself
+
+	/*
+		If a user logs in with the correct credentials, this handler will then set a cookie on the client side with the JWT value.
+		Once a cookie is set on a client, it is sent along with every request henceforth.
+	*/
 	http.SetCookie(w, &http.Cookie{
 		Name:    "token",
 		Value:   tokenString,
 		Expires: expirationTime,
 	})
+}
+
+// Writing welcome handler to handle user specific information.
+/*
+We will use session information stored on their end as cookies, we can use to
+a)Authenticate subsequent user requests
+b)Get information about the user making the request
+*/
+
+func Welcome(w http.ResponseWriter, r *http.Request) {
+	// We can obtain the session token from the requests cookies, which come with every request
+	c, err := r.Cookie("token")
+	if err != nil {
+		if err == http.ErrNoCookie {
+			// If the cookie is not set, return an unauthorized status
+			w.WriteHeader(http.StatusUnauthorized)
+			return
+		}
+		// For any other type of error, return a bad request status
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
+	// Get the JWT string from the cookie
+	tknStr := c.Value
+
+	// Initialize a new instance of `Claims`
+	claims := &Claims{}
+
+	// Parse the JWT string and store the result in `claims`.
+	// Note that we are passing the key in this method as well. This method will return an error
+	// if the token is invalid (if it has expired according to the expiry time we set on sign in),
+	// or if the signature does not match
+	tkn, err := jwt.ParseWithClaims(tknStr, claims, func(token *jwt.Token) (interface{}, error) {
+		return jwtKey, nil
+	})
+	if err != nil {
+		if err == jwt.ErrSignatureInvalid {
+			w.WriteHeader(http.StatusUnauthorized)
+			return
+		}
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+	if !tkn.Valid {
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+	// Finally, return the welcome message to the user, along with their
+	// username given in the token
+	w.Write([]byte(fmt.Sprintf("Welcome %s!", claims.Username)))
 }
