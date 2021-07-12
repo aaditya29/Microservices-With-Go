@@ -4,14 +4,14 @@
 
 #### What Are Microservices?
 Microservices are a modern approach to software whereby application code is delivered in small, <br>
-manageable pieces, independent of others.
+manageable pieces, independent of others.<br>
 ![Microservice_Architecture](https://user-images.githubusercontent.com/27721759/125249249-a3aef200-e312-11eb-8e34-ca4a9e948691.png)
 
 #### Why Build Microservices?
 Their small scale and relative isolation can lead to many additional benefits, such as easier maintenance, <br>
 improved productivity, greater fault tolerance, better business alignment, and more. <br>
 Microservice architectures are the ‘new normal’. Building small, self-contained, ready to run applications <br>
-can bring great flexibility and added resilience to your code.
+can bring great flexibility and added resilience to your code.<br>
 <img width="494" alt="microservices-logical" src="https://user-images.githubusercontent.com/27721759/125249349-c50fde00-e312-11eb-83ae-ce37c7e804d6.png">
 
 ### About This Repository
