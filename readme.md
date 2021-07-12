@@ -23,7 +23,16 @@ freecodecamp, Youtube lessons of Nicholas Jackson and Medium.<br>
 4. Swagger
 
 ### Topics Covered
-1. [Part One](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_1): Basic Microservice with Golang<br>
-2. [Part Two](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_2): Continuation of Part One Microservice with Reusable Pattern<br>
+1. [Part One](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_1): Basic Microservice Implementation with Golang.<br>
+2. [Part Two](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_2): Continuation of Part One Microservice with Reusable Pattern.<br>
+3. [Part Three](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_3): Basic RESTful Service Implementation.<br>
+4. [Part Four](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_4): Continuation of RESTful Service Implementation from Part Three.<br>
+5. [Part Five]
+6. [Part Six]
+7. [Part Seven]
+8. [Part Eight]
+9. [Part Nine]
+10. [Part Ten]
+11. [Part Eleven]
 
 <b>Please note this project is used for the personal learning/practice only.</b>
