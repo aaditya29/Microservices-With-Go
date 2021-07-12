@@ -148,4 +148,7 @@ we have set a short expiry time of five minutes. We should not expect the user t
 five minutes if their token expires.
 To solve this, we will create another /refresh route that takes the previous token (which is still valid),
 and returns a new token with a renewed expiry time.
+
+NOTE: NOTE: To minimize misuse of a JWT, the expiry time is usually kept in the order of a few minutes.
+Typically the client application would refresh the token in the background.
 */
