@@ -1,5 +1,7 @@
 package main
 
+import "github.com/dgrijalva/jwt-go"
+
 // Writing the JWT Key used to create the signature
 var jwtKey = []byte("my_secret_key")
 
@@ -15,4 +17,11 @@ var users = map[string]string{
 type Credentials struct {
 	Password string `json:"password"`
 	Username string `json:"username"`
+}
+
+// Creating a struct that will be encoded to JWT
+// Adding jwt.StandardClaims as an embedded type to provide fields like starting time
+type Claims struct {
+	Username string `json:"username"`
+	jwt.StandardClaims
 }
