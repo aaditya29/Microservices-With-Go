@@ -141,3 +141,11 @@ func Welcome(w http.ResponseWriter, r *http.Request) {
 	// username given in the token
 	w.Write([]byte(fmt.Sprintf("Welcome %s!", claims.Username)))
 }
+
+// Renewing the Token
+/*
+we have set a short expiry time of five minutes. We should not expect the user to login every
+five minutes if their token expires.
+To solve this, we will create another /refresh route that takes the previous token (which is still valid),
+and returns a new token with a renewed expiry time.
+*/
