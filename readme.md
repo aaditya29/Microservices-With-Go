@@ -27,12 +27,12 @@ freecodecamp, Youtube lessons of Nicholas Jackson and Medium.<br>
 2. [Part Two](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_2): Continuation of Part One Microservice with Reusable Pattern.<br>
 3. [Part Three](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_3): Basic RESTful Service Implementation.<br>
 4. [Part Four](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_4): Continuation of RESTful Service Implementation from Part Three.<br>
-5. [Part Five]
-6. [Part Six]
-7. [Part Seven]
-8. [Part Eight]
-9. [Part Nine]
-10. [Part Ten]
-11. [Part Eleven]
+5. [Part Five](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_5): Introduction of Gorilla Mux in RESTful Services.<br>
+6. [Part Six](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_6): Introducation of Package Validator in RESTful Services with Golang<br>
+7. [Part Seven](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_7): Introducation of Swagger in RESTful Services with Golang<br>
+8. [Part Eight](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_8): Cross Origin Resource Sharing(CORS) in Golang.<br>
+9. [Part Nine](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_9): HTTP Multipart with Golang.<br>
+10. [Part Ten](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_10): Remote Procedural Call(RPC) in Golang.<br>
+11. [Part Eleven](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_11): JWT Authentication in Golang.<br>
 
 <b>Please note this project is used for the personal learning/practice only.</b>
