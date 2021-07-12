@@ -22,4 +22,8 @@ freecodecamp, Youtube lessons of Nicholas Jackson and Medium.<br>
 3. Gorilla Framework
 4. Swagger
 
+### Topics Covered
+1. [Part One](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_1): Basic Microservice with Golang<br>
+2. [Part Two](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_2): Continuation of Part One Microservice with Reusable Pattern<br>
+
 <b>Please note this project is used for the personal learning/practice only.</b>
