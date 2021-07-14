@@ -1,6 +1,6 @@
 ## Building Microservices With Golang
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/aaditya29/Microservices-With-Go.git)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/aaditya29/Microservices-With-Go.git)<br>
 
 #### What Are Microservices?
 Microservices are a modern approach to software whereby application code is delivered in small, <br>
