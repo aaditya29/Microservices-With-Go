@@ -5,6 +5,7 @@
 #### What Are Microservices?
 Microservices are a modern approach to software whereby application code is delivered in small, <br>
 manageable pieces, independent of others.<br>
+
 ![Microservice_Architecture](https://user-images.githubusercontent.com/27721759/125249249-a3aef200-e312-11eb-8e34-ca4a9e948691.png)
 
 #### Why Build Microservices?
