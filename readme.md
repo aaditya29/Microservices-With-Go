@@ -39,4 +39,4 @@ freecodecamp, Youtube lessons of Nicholas Jackson and Medium.<br>
 10. [Part Ten](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_10): Remote Procedural Call(RPC) in Golang.<br>
 11. [Part Eleven](https://github.com/aaditya29/Microservices-With-Go/tree/master/Part_11): JWT Authentication in Golang.<br>
 
-<b>Please note this project is used for the personal learning/practice only.</b>
+<b>Please note this project is used for the personal learning/practice purpose only.</b>
