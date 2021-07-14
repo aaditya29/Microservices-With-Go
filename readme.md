@@ -12,6 +12,7 @@ Their small scale and relative isolation can lead to many additional benefits, s
 improved productivity, greater fault tolerance, better business alignment, and more. <br>
 Microservice architectures are the ‘new normal’. Building small, self-contained, ready to run applications <br>
 can bring great flexibility and added resilience to your code.<br>
+
 <img width="494" alt="microservices-logical" src="https://user-images.githubusercontent.com/27721759/125249349-c50fde00-e312-11eb-83ae-ce37c7e804d6.png">
 
 ### About This Repository
