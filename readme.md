@@ -38,4 +38,4 @@ can bring great flexibility and added resilience to your code.<br>
 3. Gorilla Framework
 4. Swagger<br>
 
-<b>Please note this project is used for the personal learning/practice purpose only.</b>
+<b>Please note this repository is used for the personal learning/practice purpose only.</b>
